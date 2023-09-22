@@ -1,0 +1,42 @@
+// Program menghitung BMI
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float bb, tb, bmi;
+    cout << "Masukkan massa badan Anda (kg): " << endl;
+    cin >> bb;
+    
+    if ( bb > 0 )
+    {
+        cout<< "Masukkan tinggi badan Anda (cm) : " << endl;
+        cin>>tb;
+        bmi = bb/((tb/100)*(tb/100));
+        cout<<"BMI : " << bmi << endl;
+    }else
+    {
+        cout<< "Data kamu tidak valid" << endl;
+    }
+
+    if ( bmi <= 0 )
+    {
+        cout<< "Jangan masukkin huruf, angka nol (0), atau bil. negatif yaa..." << endl;
+    } else if ( bmi >= 30 )
+    {
+        cout<< "Ayo mulai berolahraga, ayo sayangi tubuhmu ;) " << endl;
+    } else if ( 25 <= bmi && bmi <= 29.9 )
+    {
+        cout<< "Coba atur lagi porsi makanmu yaa" << endl;
+    } else if (18.5 <= bmi && bmi <= 24.9)
+    {
+        cout<< "Mantap, Kerenn... pertahankan yaa" << endl;
+    } else if (bmi < 18.5)
+    {
+        cout<< "Ayo makan makanan yang bergizi, jangan makan gorengan terus!" << endl;
+    }
+    
+    return 0;
+}
